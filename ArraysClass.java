@@ -29,12 +29,19 @@ public class ArraysClass {
   public void removeAt(int position) {
     if (position < 0 || position >= index)
       throw new IllegalArgumentException();
-
     for (int i = position; i < index; i++)
       items[i] = items[i + 1];
-
     index--;
-    // shift all the items after it to the left
+  }
+
+  // IndexOf method
+
+  public int indexOf(int item) {
+    for (int i = 0; i < index; i++) {
+      if (items[i] == item)
+        return i;
+    }
+    return -1;
   }
 
   // print method

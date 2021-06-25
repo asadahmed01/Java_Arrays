@@ -6,7 +6,7 @@ public class Main {
     array.Insert(30);
     array.Insert(40);
     array.Insert(50);
-    array.removeAt(4);
+    System.out.println(array.indexOf(100));
     array.print();
 
   }
