@@ -4,9 +4,9 @@ public class Main {
     array.Insert(10);
     array.Insert(20);
     array.Insert(30);
-    // array.Insert(40);
-    // array.Insert(50);
-    // array.Insert(60);
+    array.Insert(40);
+    array.Insert(50);
+    array.Insert(60);
     array.print();
 
   }

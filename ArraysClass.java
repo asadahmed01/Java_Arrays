@@ -13,13 +13,22 @@ public class ArraysClass {
   // insert method
 
   public void Insert(int item) {
-
+    // if the size is greater than index, add more space
+    if (items.length == index) {
+      int[] newArray = new int[index * 2];
+      for (int i = 0; i < index; i++)
+        newArray[i] = items[i];
+      items = newArray;
+    }
+    // add items to the array
+    items[index] = item;
+    index++;
   }
 
   // print method
 
   public void print() {
     for (int i = 0; i < index; i++)
-      System.out.println(i);
+      System.out.println(items[i]);
   }
 }
