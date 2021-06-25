@@ -25,8 +25,19 @@ public class ArraysClass {
     index++;
   }
 
-  // print method
+  // RemoveAt method
+  public void removeAt(int position) {
+    if (position < 0 || position >= index)
+      throw new IllegalArgumentException();
 
+    for (int i = position; i < index; i++)
+      items[i] = items[i + 1];
+
+    index--;
+    // shift all the items after it to the left
+  }
+
+  // print method
   public void print() {
     for (int i = 0; i < index; i++)
       System.out.println(items[i]);
